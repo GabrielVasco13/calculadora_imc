@@ -4,24 +4,39 @@ function calcularImc() {
     var campoResultado = document.getElementById("resultado");
     var campoMensagem = document.getElementById("mensagem");
 
-    let peso = Number(campoPeso.value)
-    let altura = Number(campoAltura.value)
+    let peso = Number(campoPeso.value);
+    let altura = Number(campoAltura.value);
 
-    var calculo = peso / (altura * altura)
+    console.log("Peso:", peso);
+    console.log("Altura:", altura);
 
-    if (calculo <= 18.5) {
-        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
-        campoMensagem.innerText = `Por conta disso, você está abaixo do peso`
-    } else if (calculo >= 18.5 || calculo <= 24.9) {
-        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
-        campoMensagem.innerText = `Seu peso está normal :)`
-    } else if (calculo >= 25 || calculo <= 29.9) {
-        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
-        campoMensagem.innerText = `Você está um pouco acima do peso, tome cuidado`
-    } else if (calculo >= 30 || calculo <= 34.9) {
-        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
-        campoMensagem.innerText = `Você está com Obesidade, procure um médico!`
+    var calculo = peso / (altura * altura);
+
+    console.log("Cálculo do IMC:", calculo);
+
+    switch (true) {
+        case (calculo <= 18.5):
+            campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`;
+            campoMensagem.innerText = `Por conta disso, você está abaixo do peso`;
+            break;
+        case (calculo > 18.5 && calculo <= 24.9):
+            campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`;
+            campoMensagem.innerText = `Seu peso está normal :)`;
+            break;
+        case (calculo >= 25 && calculo <= 29.9):
+            campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`;
+            campoMensagem.innerText = `Você está um pouco acima do peso, tome cuidado`;
+            break;
+        case (calculo >= 30 && calculo <= 34.9):
+            campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`;
+            campoMensagem.innerText = `Você está com Obesidade, procure um médico!`;
+            break;
+        default:
+            campoResultado.innerText = `nenhum valor foi encontrado`;
+            break;
     }
+
+    console.log("Mensagem:", campoMensagem.innerText);
 
 }
 

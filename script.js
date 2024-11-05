@@ -7,12 +7,7 @@ function calcularImc() {
     let peso = Number(campoPeso.value);
     let altura = Number(campoAltura.value);
 
-    console.log("Peso:", peso);
-    console.log("Altura:", altura);
-
     var calculo = peso / (altura * altura);
-
-    console.log("Cálculo do IMC:", calculo);
 
     switch (true) {
         case (calculo <= 18.5):
@@ -35,8 +30,6 @@ function calcularImc() {
             campoResultado.innerText = `nenhum valor foi encontrado`;
             break;
     }
-
-    console.log("Mensagem:", campoMensagem.innerText);
 
 }
 

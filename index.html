@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulando o DOM</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <h1>Calculando IMC(indíce de massa corporal)</h1>
-
-    <p>Digite a sua altura! :)</p>
-    <input type="number" name="altura" id="altura" placeholder="altura">
-
-    <p>Agora, digite o seu peso</p>
-    <input type="number" name="peso" id="peso" placeholder="peso">
-
-    <button type="submit" onclick="calcularImc()">Clique aqui!</button>
-
-    <div id="resultado">
-        Resultado ->
+    <div class="container">
+        <h1>Calculando IMC (índice de massa corporal)</h1>
+        <p>Digite a sua altura! :)</p>
+        <input type="number" name="altura" id="altura" placeholder="altura">
+        <p>Agora, digite o seu peso</p>
+        <input type="number" name="peso" id="peso" placeholder="peso">
+        <button type="submit" onclick="calcularImc()">Clique aqui!</button>
+        <div id="resultado">
+            Resultado vai ser mostrado aqui
+        </div>
     </div>
 </body>
 

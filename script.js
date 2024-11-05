@@ -11,9 +11,18 @@ function calcularImc() {
 
     if (calculo <= 18.5) {
         campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
+        campoMensagem.innerText = `Por conta disso, você está abaixo do peso`
+    } else if (calculo >= 18.5 || calculo <= 24.9) {
+        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
+        campoMensagem.innerText = `Seu peso está normal :)`
+    } else if (calculo >= 25 || calculo <= 29.9) {
+        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
+        campoMensagem.innerText = `Você está um pouco acima do peso, tome cuidado`
+    } else if (calculo >= 30 || calculo <= 34.9) {
+        campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
+        campoMensagem.innerText = `Você está com Obesidade, procure um médico!`
     }
 
-    campoResultado.innerText = `O resultado do seu IMC: ${calculo.toFixed(2)}`
 }
 
 
